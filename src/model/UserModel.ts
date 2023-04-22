@@ -6,4 +6,8 @@ export class UserModel {
 	static getUsers(): IUser[] {
 		return this.users;
 	}
+
+	static createUser(user: IUser): void {
+		this.users.push(user);
+	}
 }
