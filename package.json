@@ -9,7 +9,14 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.13",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.7",
     "tsx": "^3.12.6",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "eslint": "^8.39.0"
   }
 }
