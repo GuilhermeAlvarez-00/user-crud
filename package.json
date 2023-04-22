@@ -1,0 +1,15 @@
+{
+  "name": "crud-user",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.13",
+    "tsx": "^3.12.6",
+    "typescript": "^5.0.4"
+  }
+}
