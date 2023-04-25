@@ -10,4 +10,18 @@ export class UserModel {
 	static createUser(user: IUser): void {
 		this.users.push(user);
 	}
+
+	static updateUser(userUpdate: Omit<IUser, "createdAt">): void {
+		const userUpdateIndex = this.users.findIndex(
+			(user) => user.id === userUpdate.id
+		);
+
+		if (userUpdateIndex < 0) return;
+
+		this.users[userUpdateIndex] = {
+			...this.users[userUpdateIndex],
+			name: userUpdate.name,
+			email: userUpdate.email,
+		};
+	}
 }

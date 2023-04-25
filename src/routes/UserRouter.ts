@@ -7,6 +7,8 @@ export class UserRouter {
 			UserController.getUsers(req, res);
 		} else if (req.url === "/users/create" && req.method === "POST") {
 			UserController.createUser(req, res);
+		} else if (req.url === "/users/update" && req.method === "PUT") {
+			UserController.updateUser(req, res);
 		}
 	}
 }
