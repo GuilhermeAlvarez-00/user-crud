@@ -60,4 +60,20 @@ export class UserController {
 			res.end(JSON.stringify(user));
 		});
 	}
+
+	static deleteUser(req: IncomingMessage, res: ServerResponse): void {
+		let body = "";
+		req.on("data", (chunk) => {
+			body += chunk;
+		});
+
+		req.on("end", () => {
+			const { id } = JSON.parse(body);
+
+			UserModel.deleteUser(id);
+		});
+
+		res.writeHead(201, { "Content-Type": "application/json" });
+		res.end(JSON.stringify({ message: "user deleted" }));
+	}
 }

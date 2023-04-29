@@ -9,6 +9,8 @@ export class UserRouter {
 			UserController.createUser(req, res);
 		} else if (req.url === "/users/update" && req.method === "PUT") {
 			UserController.updateUser(req, res);
+		} else if (req.url === "/users/delete" && req.method === "DELETE") {
+			UserController.deleteUser(req, res);
 		}
 	}
 }

@@ -24,4 +24,8 @@ export class UserModel {
 			email: userUpdate.email,
 		};
 	}
+
+	static deleteUser(userId: string): void {
+		this.users = this.users.filter((user) => user.id !== userId);
+	}
 }
